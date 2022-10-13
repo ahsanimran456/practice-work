@@ -132,13 +132,12 @@ signupbtn.addEventListener("click", signup)
 
 
 
-
 // window.onload = async () => {
 //   onAuthStateChanged(auth, (user) => {
 //     if (user) {
 //       window.location.replace("./profile/profile.html")
 //     }
-//     // getdata_CurrentUser(user.uid)
+//     getdata_CurrentUser(user.uid)
      
 //   });
 // };
@@ -159,12 +158,7 @@ const login = () => {
         // sin(user)
         window.location="./profile/profile.html"
         console.log("login user .....", user)
-      }
-      
-
-
-      
-      )
+      })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;

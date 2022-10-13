@@ -21,8 +21,7 @@ window.onload = async () => {
     if (!user) {
       window.location.replace("../index.html")
     }
-    getdata_CurrentUser(user.uid)
-     
+    getdata_CurrentUser(user.uid) 
   });
 };
 
@@ -92,12 +91,12 @@ let loader = document.querySelector('.loader');
     // query(todoRef, orderBy("timestamp", "asc")),
 
     const loadAllChats = (chatID,otherUserid,myId) => {
-      const q = query(collection(db, "messages"), where("chat_id", "==", chatID),orderBy("timestamp", "asc"));
+      const q = query(collection(db, "messages"), where("chat_id", "==", chatID));
       let conversation = document.getElementById("conversation");
       const unsubscribe = onSnapshot(q, (querySnapshot) => {
         conversation.innerHTML = "";
         querySnapshot.forEach((doc) => {
-          conversation.innerHTML += `<li class="frnd  mymesg mt-5 mb-5">${doc.data().message}</li>`;
+          conversation.innerHTML += `<li class="frnd  mymesg">${doc.data().message}</li>`;
           
         });
       });
