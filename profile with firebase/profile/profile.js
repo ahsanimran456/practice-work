@@ -11,7 +11,7 @@ let stylesArray = [
 console.log('%c Created By Ahsan Imran‍...!', stylesArray);
 //getdata>>>>>>>>>>>>>>>>>>>>>>
 import { auth, getAuth,signOut ,createUserWithEmailAndPassword,signInWithEmailAndPassword, onAuthStateChanged,  } from "../firebase.js";
-import { db, setDoc,doc, getDocs,getDoc, collection  ,query,where } from "../firebase.js";
+import { db, setDoc,doc,addDoc, getDocs,getDoc, collection  ,query,where ,onSnapshot,orderBy} from "../firebase.js";
 
 
 
@@ -61,6 +61,48 @@ let loader = document.querySelector('.loader');
       });
     };
 
+    const startChat = (otherUserid, otherUsername, myId, currentName)=>{
+      console.log( otherUserid , otherUsername,myId,currentName)
+      let user_chat_with = document.getElementById("chat-with")
+      user_chat_with.innerHTML= `<span>${otherUsername}</span>`
+      let send = document.getElementById("send");
+      let message = document.getElementById("message");
+      let chatID;
+      if (otherUserid < myId) {
+        chatID = `${otherUserid}${myId}`;
+        console.log("chat",chatID)
+      } else {
+        chatID = `${myId}${otherUserid}`;
+      }
+      loadAllChats(chatID, otherUserid,myId);
+      send.addEventListener("click", async () => {
+        let conversation = document.getElementById("conversation");
+        conversation.innerHTML = "";
+        await addDoc(collection(db, "messages"), {
+          sender_name: currentName,
+          receiver_name: otherUsername,
+          sender_id: myId,
+          receiver_id: otherUserid,
+          chat_id: chatID,
+          message: message.value,
+          timestamp: new Date(),
+        });
+      });
+    }
+    // query(todoRef, orderBy("timestamp", "asc")),
+
+    const loadAllChats = (chatID,otherUserid,myId) => {
+      const q = query(collection(db, "messages"), where("chat_id", "==", chatID),orderBy("timestamp", "asc"));
+      let conversation = document.getElementById("conversation");
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        conversation.innerHTML = "";
+        querySnapshot.forEach((doc) => {
+          conversation.innerHTML += `<li class="frnd  mymesg mt-5 mb-5">${doc.data().message}</li>`;
+          
+        });
+      });
+    };
+window.startChat = startChat
 
 
 

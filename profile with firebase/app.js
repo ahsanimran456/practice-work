@@ -33,7 +33,7 @@ try {
 
 
 import { app } from "./firebase.js";
-import { auth,  query,where, getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, } from "./firebase.js";
+import { auth,  query,where,orderBy, getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, } from "./firebase.js";
 import { db, setDoc, doc } from "./firebase.js";
 // import{sin}from "./profile/profile.js"
 
@@ -133,15 +133,15 @@ signupbtn.addEventListener("click", signup)
 
 
 
-window.onload = async () => {
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      window.location.replace("./profile/profile.html")
-    }
-    // getdata_CurrentUser(user.uid)
+// window.onload = async () => {
+//   onAuthStateChanged(auth, (user) => {
+//     if (user) {
+//       window.location.replace("./profile/profile.html")
+//     }
+//     // getdata_CurrentUser(user.uid)
      
-  });
-};
+//   });
+// };
 
 //   login portion >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -159,7 +159,12 @@ const login = () => {
         // sin(user)
         window.location="./profile/profile.html"
         console.log("login user .....", user)
-      })
+      }
+      
+
+
+      
+      )
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
