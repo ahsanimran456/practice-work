@@ -1,0 +1,21 @@
+.main,
+.app-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.users-box {
+  border: 2px solid grey;
+  padding: 50px;
+}
+
+.chat-box {
+  border: 2px solid grey;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+}
