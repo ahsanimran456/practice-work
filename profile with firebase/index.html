@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Whatsapp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-6 mx-1 bg-primary  text-center">
+                    <div class="login-box" id="login">
+                        <h2>Login</h2>
+                        <form>
+                            <div class="user-box">
+                                <input type="text"  required id="l_email">
+                                <label>Email</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password" required id="l_password">
+                                <label>Password</label>
+                            </div>
+                            <a class="submithover" href="#" id="loginbtn"> 
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Submit
+                            </a>
+                            <a href="#" id="showsignup">Creat a new Account</a>
+                        </form>
+                    </div>
+
+
+
+                <!-- .................... signup protion............................................. -->
+
+
+
+                    <div class="login-box hidden"id="signup">
+                        <h2>Sign Up</h2>
+                        <form>
+                            <div class="user-box">
+                                <input type="text" name="" required id="name">
+                                <label>Username</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="email" name="" required id="email">
+                                <label>Email</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password" name="" required id="password" >
+                                <label>Password</label>
+                            </div>
+                            <a class="submithover" href="#" type="submit" id="signupbtn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                SignUp
+                            </a>  
+                            <div class="spinner-border text-success" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>                        
+                            <a href="#" id="showlogin">Already Have an account?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="app.js" type="module"></script>    
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

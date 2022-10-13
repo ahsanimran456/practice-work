@@ -1,0 +1,128 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+
+
+}
+
+.main{
+height: 100vh;
+width: 100%;
+}
+
+#chat{
+    height: 87.2vh;
+    overflow-y:scroll ;
+}
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+}
+.loader img{
+  width: 100%;
+  height: 100vh;
+}
+.conversation {
+  position: absolute;
+  bottom: 0;
+}
+.chatcontainer {
+
+  position: relative;
+}
+.conversation {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+}
+.conversation input {
+  width: 80%;
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: darkgray; 
+    border-radius: 10px;
+    
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+
+  }
+
+
+.chatlist:active{
+ background-color: #f0f2f5;
+
+  }
+
+.chatcontainer{
+    background-image: url(../images/chatback.png);
+    width: 100%;
+    height: 575px;
+
+}
+
+.wal2-image{
+  margin-left: 50px !important;
+}
+
+.swal2-html-container{
+  color: white !important;
+} 
+
+
+
+/* body{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+} */
+
+/* .top{
+  height: 120px;
+  width: 100%;
+  background-color: #009688;
+  position: fixed !important;
+  z-index: -1 !important;
+  margin-top: -20px;
+} */
+/* .chat-cont{
+  height: calc(100% - 40px) !important;
+  height: 100vh;
+  width: 100% !important;
+  margin-top: 20px ;
+  overflow: hidden;
+}
+
+.chats{
+  background-color: red;
+  height: 100vh;
+  overflow-y: scroll;
+  margin-top: -15px;
+}
+
+.userchat{
+  background-image: url(../images/chatback.png);
+} */
+
+
+
+
