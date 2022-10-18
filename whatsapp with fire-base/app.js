@@ -48,7 +48,8 @@ const signup = () => {
   let s_usernametest = /^[A-Za-z .]{3,20}$/
   let s_emailtest = /^([\w]*[\w\.]*(?!\.)@gmail.com)/
   let s_passwordtest = /^[a-zA-Z0-9]{6,16}$/;
-  if ((s_usernametest.test(name.value)) && (s_emailtest.test(email.value)) && (s_passwordtest.test(password.value))) {
+  let profile = document.getElementById("profile")
+  if ((s_usernametest.test(name.value)) && (s_emailtest.test(email.value)) && (s_passwordtest.test(password.value))&&(profile.files.length !=0 )) {
     createUserWithEmailAndPassword(auth, email.value, password.value)
       .then(async (userCredential) => {
         // Signed in 
@@ -59,7 +60,8 @@ const signup = () => {
           email: email.value,
           password: password.value,
           userUid:user.uid
-        });
+        })
+        getProfile();
         // Swal.fire({
         //   imageUrl: "./favicon.png",
         //   imageWidth: 100,
@@ -108,7 +110,7 @@ const signup = () => {
       imageWidth: 100,
       imageHeight: 100,
       title: "Error",
-      text: "Please enter a valid e-mail,Password",
+      text: "Please enter a valid e-mail,Password or Profile picture",
       iconColor: 'red',
       confirmButtonColor: "red",
       background: 'rgb(54 54 54 / 57%)',
@@ -209,4 +211,56 @@ const login = () => {
 // };
 
   
-  
+// images get 
+
+
+ async function getProfile() {
+  let profile_pic = document.getElementById("profile");
+  let file = profile_pic.files[0];
+  console.log("file",file)
+  const auth = getAuth();
+  let uid = auth.currentUser.uid;
+  console.log(uid)
+  let url = await uploadFiles(file);
+  const imagePut = doc(db, "users", uid);
+  await updateDoc(imagePut, {
+    profile: url,
+  })
+}
+const uploadFiles = (file) => {
+  return new Promise((resolve, reject) => {
+    const storage = getStorage();
+    const auth = getAuth();
+    let uid = auth.currentUser.uid;
+    const storageRef = ref(storage, `users/${uid}.png`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log("Upload is " + progress + "% done");
+        switch (snapshot.state) {
+          case "paused":
+            console.log("Upload is paused");
+            break;
+          case "running":
+            console.log("Upload is running");
+            break;
+        }
+      },
+      (error) => {
+        reject(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          resolve(downloadURL);
+        }
+        );
+      }
+    );
+  }
+  );
+};
+
+window.getProfile = getProfile
