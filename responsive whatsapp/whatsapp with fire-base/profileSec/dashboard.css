@@ -1,0 +1,126 @@
+*{
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    box-sizing: border-box !important;
+   
+}
+.loader {
+    position: fixed;
+    width: 100% ;
+    height: 100vh;
+    z-index: 999;
+    /* display: none; */
+  }
+.loader img {
+    position: fixed;
+    width: 100% ;
+    height: 100vh;
+ 
+  }
+/* responsive menu frnd  */
+@media only screen and (max-width: 769px) {
+    .menu-responsive{
+        display: block !important;
+    }
+    .list-hide-sm{
+        display: none;
+    }
+  }
+.menu-responsive{
+    display: none;
+}
+
+/* profile list  */
+.header{
+    padding: 7px 7px !important;
+}
+.header-res{
+    padding: 5px 10px;
+}
+
+/* friends lis css  */
+
+/* .each-friend{
+
+} */
+.myFriends {
+    width: 100%;
+   height: 88vh;   /* change karni hy  */
+    padding: 10px 10px !important;
+    overflow-y: scroll;
+    background-color: #F0F2F5;
+}
+.myFriends a {
+    text-decoration: none;
+    color: black !important;
+    font-size: 17px;
+
+}
+.each-friend{
+    margin: 5px 0 ;
+}
+
+.eachFriends-res a {
+    color: black ;
+}
+
+
+/* chat portion css  */
+
+ /* chat header  */
+ .chat-header{
+    padding: 7px 7px;
+ }
+
+ /* chat messages portion  */
+
+ .chatShow-portion{
+    background-image: url(../images/chatback.png);
+    width: 100%;
+    background-size: cover;
+    height: 88vh;
+    position: relative;
+ }
+
+ /* message portion  */
+
+ /* message portion initial  */
+ .chat-initial-inner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 120px 0;
+ }
+ .chat-initial-inner h3{ font-weight: 300;
+    color: #667781;}
+ .chat-initial-inner p{
+    font-size: 13px;
+    color: #667781;
+ }
+
+ .chat-initial{
+    display: none;
+ }
+ .chat-click{
+    display: block;
+ }
+ .message-portion{
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    width: 100%;
+    background-color:#FFFFFF;
+    display: flex !important;
+    justify-content: space-around !important;
+ }
+
+ .message-col{
+    width: 95%;
+
+ }
+ .message-col input{
+    width: inherit;
+ }
