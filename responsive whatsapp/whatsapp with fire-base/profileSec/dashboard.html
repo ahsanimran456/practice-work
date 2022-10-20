@@ -21,19 +21,20 @@
 <body>
     <!-- loader  -->
 
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="loader_wrapper">
             <img src="../images/profile_animation.gif" alt="">
         </div>
-    </div> -->
+    </div>
     <div class="container-fluid ">
         <div class="menu-responsive ">
             <!-- <button class="btn btn-primary hide-menu" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"> -->
-            <i class="fa-solid fa-user-group btn btn-primary hide-menu" data-bs-toggle="offcanvas"
+            <i class="fa-solid fa-user-group btn btn-primary hide-menu " data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+            <span>Friends</span>
             <!-- </button> -->
-            <div class="offcanvas offcanvas-start hide-menu2" tabindex="-1" id="offcanvasExample"
+            <div class="offcanvas offcanvas-start hide-menu2 ofcanva-hide-click" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Friends</h5>
@@ -47,12 +48,12 @@
                                 <div>
                                     <nav class="navbar navbar-light p-0 ">
                                         <div class="container p-0">
-                                            <a class="navbar-brand" href="#">
+                                            <a class="navbar-brand" href="#" id="my_dp_res">
                                                 <img src="../friends.png" alt="" width="50" height="50">
                                                 <span class="text-uppercase" id="frnd-name">ahsan</span>
                                             </a>
                                             <div>
-                                                <svg viewBox="0 0 24 24" height="24" width="24"
+                                                <!-- <svg viewBox="0 0 24 24" height="24" width="24"
                                                     preserveAspectRatio="xMidYMid meet" class=" mx-2" version="1.1"
                                                     id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6" x="0px" y="0px"
                                                     enable-background="new 0 0 24 24" xml:space="preserve">
@@ -70,7 +71,7 @@
                                                     <path fill="currentColor" enable-background="new    "
                                                         d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z"
                                                         style="color: #667781"></path>
-                                                </svg>
+                                                </svg> -->
                                                 <svg viewBox="0 0 24 24" height="24" width="24"
                                                     preserveAspectRatio="xMidYMid meet" class="mx-2" version="1.1"
                                                     x="0px" y="0px" enable-background="new 0 0 24 24"
@@ -82,42 +83,18 @@
 
                                             </div>
                                         </div>
-                                        <hr class="intersect p-0 m-0">
+                                        <!-- <hr class="intersect p-0 m-0"> -->
                                     </nav>
                                 </div>
                             </div>
                             <div class="myFriends-res">
-                                <div class="eachFriends-res">
-                                    <div class="container p-0">
+                                <div class="each-friend-res">
+                                    <!-- <div class="container p-0">
                                         <a class="navbar-brand" href="#">
                                             <img src="../friends.png" alt="" width="50" height="50">
                                             <span class="text-uppercase" id="frnd-name">ahsan</span>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="eachFriends-res">
-                                    <div class="container p-0">
-                                        <a class="navbar-brand" href="#">
-                                            <img src="../friends.png" alt="" width="50" height="50">
-                                            <span class="text-uppercase" id="frnd-name">ahsan</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="eachFriends-res">
-                                    <div class="container p-0">
-                                        <a class="navbar-brand" href="#">
-                                            <img src="../friends.png" alt="" width="50" height="50">
-                                            <span class="text-uppercase" id="frnd-name">ahsan</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="eachFriends-res">
-                                    <div class="container p-0">
-                                        <a class="navbar-brand" href="#">
-                                            <img src="../friends.png" alt="" width="50" height="50">
-                                            <span class="text-uppercase" id="frnd-name">ahsan</span>
-                                        </a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -128,12 +105,12 @@
         <!-- screen  -->
         <div class="row ">
             <!-- left portion  -->
-            <div class="col-md-4 bg-dark p-0 list-hide-sm">
+            <div class="col-md-4  p-0 m-0 list-hide-sm">
                 <div class="header p-0">
                     <div>
                         <nav class="navbar navbar-light p-0 ">
                             <div class="container p-0">
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="#" id="my-dp">
                                     <img src="../friends.png" alt="" width="50" height="50">
                                     <span class="text-uppercase" id="frnd-name">ahsan</span>
                                 </a>
@@ -155,36 +132,33 @@
                                             d="M19.005,3.175H4.674C3.642,3.175,3,3.789,3,4.821V21.02 l3.544-3.514h12.461c1.033,0,2.064-1.06,2.064-2.093V4.821C21.068,3.789,20.037,3.175,19.005,3.175z M14.016,13.044H7.041V11.1 h6.975V13.044z M17.016,9.044H7.041V7.1h9.975V9.044z"
                                             style="color: #667781"></path>
                                     </svg>
-                                    <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet"
-                                        class="mx-2" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24"
-                                        xml:space="preserve">
+                                    <svg onclick="button_logout()" viewBox="0 0 24 24" height="24" width="24"
+                                        preserveAspectRatio="xMidYMid meet" class="mx-2" version="1.1" x="0px" y="0px"
+                                        enable-background="new 0 0 24 24" xml:space="preserve">
                                         <path fill="currentColor"
                                             d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"
-                                            style="color: #667781"></path>
+                                            style="color: #667781;cursor: pointer !important;"></path>
                                     </svg>
+                                    <div class="logout_wrapper">
+                                        <ul>
+                                            <li class="signtout">Logout</li>
+                                        </ul>
+                                    </div>
 
                                 </div>
                             </div>
-                            <hr class="intersect p-0 m-0">
+                            <!-- <hr class="intersect p-0 m-0"> -->
                         </nav>
                     </div>
                 </div>
                 <div class="myFriends">
-                    <div class="each-friend">
-                        <div class="container p-0">
+                    <div class="each-friend ">
+                        <!-- <div class="container p-0">
                             <a class="navbar-brand" href="#">
                                 <img src="../friends.png" alt="" width="50" height="50">
                                 <span class="text-uppercase" id="frnd-name">ahsan</span>
                             </a>
-                        </div>
-                    </div>
-                    <div class="each-friend">
-                        <div class="container p-0">
-                            <a class="navbar-brand" href="#">
-                                <img src="../friends.png" alt="" width="50" height="50">
-                                <span class="text-uppercase" id="frnd-name">ahsan</span>
-                            </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -192,7 +166,8 @@
             <!-- right portion on  initial  -->
             <div class="col-lg-8 col-md-12 col-sm-12 chat-initial">
                 <div class="chat-initial-inner">
-                    <svg viewBox="0 0 303 172" width="360" preserveAspectRatio="xMidYMid meet" class="" fill="none">
+                    <svg viewBox="0 0 303 172" width="360" preserveAspectRatio="xMidYMid meet" class="svgicon"
+                        fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M229.565 160.229C262.212 149.245 286.931 118.241 283.39 73.4194C278.009 5.31929 212.365 -11.5738 171.472 8.48673C115.998 35.6999 108.972 40.1612 69.2388 40.1612C39.645 40.1612 9.51318 54.4147 5.7467 92.952C3.0166 120.885 13.9985 145.267 54.6373 157.716C128.599 180.373 198.017 170.844 229.565 160.229Z"
                             fill="#DAF7F3"></path>
@@ -242,28 +217,30 @@
                             d="M208.184 87.1094L204.777 84.3593C204.777 84.359 204.776 84.3587 204.776 84.3583C203.957 83.6906 202.744 83.8012 202.061 84.6073C201.374 85.4191 201.486 86.6265 202.31 87.2997L202.312 87.3011L207.389 91.4116C207.389 91.4119 207.389 91.4121 207.389 91.4124C208.278 92.1372 209.611 91.9373 210.242 90.9795L218.283 78.77C218.868 77.8813 218.608 76.6968 217.71 76.127C216.817 75.5606 215.624 75.8109 215.043 76.6939L208.184 87.1094Z"
                             fill="white" stroke="#316474"></path>
                     </svg>
-                    <div class="mt-5">
-                        <h3>
-                            WhatsApp Web
-                        </h3>
-                    </div>
-                    <div class="mt-2">
-                        <p>
-                            Send and receive messages without keeping your phone online. </br>
-                            Use WhatsApp on up to 4 linked devices and 1 phone at the same time.
-                        </p>
+                    <div class="res-mob">
+                        <div class="mt-5">
+                            <h3>
+                                WhatsApp Web
+                            </h3>
+                        </div>
+                        <div class="mt-2">
+                            <p>
+                                Send and receive messages without keeping your phone online. </br>
+                                Use WhatsApp on up to 4 linked devices and 1 phone at the same time.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-8 col-md-12 col-sm-12 bg-primary p-0 chat-click">
-                <header class="bg-success">
+            <div class="col-lg-8 col-md-12 col-sm-12  p-0 chat-click">
+                <header class="">
                     <div class="chat-header">
                         <nav class="navbar navbar-light p-0 ">
                             <div class="container p-0">
-                                <a class="navbar-brand" href="#">
-                                    <img src="../friends.png" alt="" width="50" height="50">
-                                    <span class="text-uppercase" id="frnd-name">ahsan</span>
+                                <a class="navbar-brand" href="#" id="friendName">
+                                    <!-- <img src="../friends.png" alt="" width="50" height="50">
+                                    <span class="text-uppercase" id="frnd-name">ahsan</span> -->
                                 </a>
                                 <div>
                                     <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet"
@@ -298,7 +275,12 @@
                     </div>
                 </header>
                 <div class="chatShow-portion">
-                    <div class="usersChats-Realtime"></div>
+                    <div class="usersChats-Realtime">
+                        <ul class="user-chats-realtime-ul">
+
+
+                        </ul>
+                    </div>
                     <div class="message-portion">
                         <div class="mx-2 ">
                             <span>
@@ -321,18 +303,20 @@
                             </span>
                         </div>
                         <div class="message-col ">
-                            <input type="text" placeholder="Type a message">
+                            <input type="text" placeholder="Type a message" id="message">
                         </div>
                         <div>
-                            <span>
-                                <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet"
-                                    class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24"
-                                    xml:space="preserve">
-                                    <path fill="currentColor"
-                                        d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"
-                                        style="color: #667781" id="send"></path>
-                                </svg>
-                            </span>
+                            <button id="send">
+                                <span>
+                                    <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet"
+                                        class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24"
+                                        xml:space="preserve">
+                                        <path fill="currentColor"
+                                            d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"
+                                            style="color: #667781"></path>
+                                    </svg>
+                                </span>
+                            </button>
                         </div>
 
 
@@ -341,6 +325,7 @@
             </div>
         </div>
     </div>
+    <script src="profile.js" type="module"></script>
 </body>
 
 </html>

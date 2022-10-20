@@ -2,7 +2,11 @@
     /* margin: 0 !important;
     padding: 0 !important; */
     box-sizing: border-box !important;
+    /* overflow-x: hidden; */
    
+}
+a{
+    color: black !important;
 }
 .loader {
     position: fixed;
@@ -21,6 +25,8 @@
 @media only screen and (max-width: 769px) {
     .menu-responsive{
         display: block !important;
+        background-color: #46e97c;
+       
     }
     .list-hide-sm{
         display: none;
@@ -29,6 +35,17 @@
 .menu-responsive{
     display: none;
 }
+
+.hide-menu{
+    background-color: green;
+    border: 1px solid #46e97c;
+}
+.hide-menu:hover{
+    background-color: green;
+  
+    border: 1px solid #46e97c;
+}
+
 
 /* profile list  */
 .header{
@@ -58,10 +75,16 @@
 }
 .each-friend{
     margin: 5px 0 ;
+    cursor: pointer;
+
 }
 
 .eachFriends-res a {
     color: black ;
+}
+.hr-sec{
+    width: 100%;
+    opacity: 0.1;
 }
 
 
@@ -92,9 +115,21 @@
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 120px 0;
+    padding: 120px 5px;
  }
- .chat-initial-inner h3{ font-weight: 300;
+ /* @media only screen and (max-width: 375px) {
+    .chat-initial-inner{
+        padding: 120 ;
+    }
+  } */
+ .svgicon{
+    width: 100%;
+ }
+ .res-mob{
+    width: 100%;
+ }
+ .chat-initial-inner h3{ 
+    font-weight: 300;
     color: #667781;}
  .chat-initial-inner p{
     font-size: 13px;
@@ -102,10 +137,10 @@
  }
 
  .chat-initial{
-    display: none;
+    display: block;
  }
  .chat-click{
-    display: block;
+    display: none;
  }
  .message-portion{
     position: absolute;
@@ -119,8 +154,147 @@
 
  .message-col{
     width: 95%;
-
+    /* height: 50px; */
  }
  .message-col input{
     width: inherit;
  }
+ #send {
+    border: none;
+    background-color: #FFFFFF;
+ }
+
+/* msg realtime  */
+
+.usersChats-Realtime{
+    width: 100%;
+    height: inherit;
+    padding: 20px 30px;
+    overflow: scroll;
+}
+
+.user-chats-realtime-ul{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.user-chats-realtime-ul li {
+    margin-top: 10px;
+    max-width: 70%;
+    width: fit-content;
+    padding: 10px 10px;
+    font-size: 14px;
+    list-style: none;
+}
+.frnd{
+    /* background-color: red !important; */
+    background-color: #FFFFFF !important;
+    border-radius: 5px;
+
+}
+.myme{
+    background-color:#D9FDD3 !important;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+
+} 
+
+
+/* signout  */
+
+.logout_wrapper{
+    display: none;;
+}
+.show{
+    display: block;
+  
+}
+.logout_wrapper.show {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.logout_wrapper.show ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.logout_wrapper.show ul li {
+    list-style: none;
+    border: 2px solid  #46e97c;
+    border-radius: 5px;
+    background: linear-gradient(90deg,#80FF72,#7EE8FA);
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color:  #667781;
+
+    
+}
+
+
+/* responsive portion  */
+
+.header-res{
+    background-color:#F0F2F5;
+}
+
+/* friends list  */
+.myFriends-res{
+    margin-top: 10px;
+}
+
+.each-friend-res{
+    cursor: pointer;
+}
+button.btn-close.text-reset {
+    margin-right: 10px;
+    font-size: 21px;
+
+}
+.offcanvas-header {
+    background-color:#46e97c !important ;
+}
+
+
+
+
+/* .conversation-div-ul li {   
+    max-width: 70%;
+    word-wrap: break-word;
+    width: fit-content;
+    padding: 10px 10px 6px 10px;
+    font-size: 14px;
+    margin-top:5px;
+    display: flex;
+    /* flex-direction: column-reverse; */
+ 
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

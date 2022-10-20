@@ -1,4 +1,6 @@
+*{
 
+}
 .main{
     background-image: url(./images/background.png ) !important;
     background-size: cover;
@@ -12,12 +14,17 @@
     top: 50%;
     left: 50%;
     width: 370px;
-    padding: 30px;
+    padding: 25px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+  }
+  @media only screen and (max-width: 370px) {
+    .login-box{
+      width: 350px;
+    }
   }
   
   .login-box h2 {
