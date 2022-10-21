@@ -11,7 +11,7 @@ let stylesArray = [
 console.log('%c Created By Ahsan Imran‍...!', stylesArray);
 // import 
 import { auth, getAuth,signOut ,createUserWithEmailAndPassword,signInWithEmailAndPassword, onAuthStateChanged,  } from "../firebase/firebase.js";
-import { db, setDoc,doc,addDoc, getDocs,getDoc, collection  ,query,where ,onSnapshot,orderBy} from "../firebase/firebase.js";
+import { db, setDoc,doc,addDoc, getDocs,getDoc, collection  ,query,where ,onSnapshot,orderBy,updateDoc, deleteField} from "../firebase/firebase.js";
 window.onload = async () => {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
@@ -130,14 +130,21 @@ const startChat = (otherUserid, otherUsername, myId, currentName,other_profile)=
       message.innerHTML=""
     })
   }
+//  const deleteChat= async()=>{
+//   const query = doc(db, 'messages', where("chat_id","==",chatID));
+// await updateDoc(query, {
+//     query: deleteField()
+// });}
 
   const loadAllChats = (chatID,otherUserid,myId) => {
     const q = query(collection(db, "messages"), where("chat_id","==",chatID),orderBy("timestamp", "desc"));
     let  user_chats_realtime_ul = document.querySelector(".user-chats-realtime-ul");
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         user_chats_realtime_ul.innerHTML = "";
+        deleteChat(chatID)
       querySnapshot.forEach((doc) => {
         if(doc.data().sender_id==otherUserid){
+            
             user_chats_realtime_ul.innerHTML += 
             `<li class="frnd">${doc.data().message}</li>`;
         }
@@ -146,24 +153,38 @@ const startChat = (otherUserid, otherUsername, myId, currentName,other_profile)=
 
         }
         
-      });
+      }
+      );
     });
   };
 
+
+  const deleteChat= async(chatID)=>{
+    const query = doc(db, 'messages', where("chat_id","==",chatID));
+    await deleteDoc(doc(db, "messages", query))
+  // await updateDoc(query, {
+  //     query: deleteField()
+      
+  // });
+}
+
+window.deleteChat= deleteChat
 window.startChat = startChat
 
 
 // signOut 
 
 let logout_wrapper = document.querySelector(".logout_wrapper");
+let logout_wrapper_res = document.querySelector(".logout_wrapper-res");
 
 let button_logout = ()=>{
   logout_wrapper.classList.toggle("show")
+  logout_wrapper_res.classList.toggle("show-res")
 }
 
 window.button_logout = button_logout;
- 
     let signtout = document.querySelector('.signtout')
+    let signtout_res = document.querySelector('.signtout-res')
     signtout.addEventListener("click",()=>{
       signOut(auth).then(() => {
         window.location.href = "../index.html";
@@ -171,7 +192,15 @@ window.button_logout = button_logout;
         // An error happened.
       });
     })
+    signtout_res.addEventListener("click",()=>{
+      signOut(auth).then(() => {
+        window.location.href = "../index.html";
+      }).catch((error) => {
+        // An error happened.
+      });
+    })
 window.signtout= signtout
+window.signtout_res= signtout_res
 
 
 // ofcanva click 
@@ -180,3 +209,14 @@ function ofcanvaClick(){
   ofcanva_hide_click.style.display="none"
 }
 window.ofcanvaClick=ofcanvaClick
+
+
+
+// import { doc, updateDoc, deleteField } from "firebase/firestore";
+
+// const cityRef = doc(db, 'cities', 'BJ');
+
+// // Remove the 'capital' field from the document
+// await updateDoc(cityRef, {
+//     capital: deleteField()
+// });

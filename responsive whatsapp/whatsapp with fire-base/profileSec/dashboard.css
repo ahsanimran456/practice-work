@@ -117,14 +117,14 @@ a{
     text-align: center !important;
     padding: 120px 5px;
  }
- /* @media only screen and (max-width: 375px) {
-    .chat-initial-inner{
-        padding: 120 ;
-    }
-  } */
- .svgicon{
+ @media only screen and (max-width: 400px) {
+   .svgicon{
     width: 100%;
  }
+  }
+ /* .svgicon{
+    width: 100%;
+ } */
  .res-mob{
     width: 100%;
  }
@@ -145,7 +145,7 @@ a{
  .message-portion{
     position: absolute;
     bottom: 0;
-    padding: 10px 20px;
+    padding: 20px 30px;
     width: 100%;
     background-color:#FFFFFF;
     display: flex !important;
@@ -174,8 +174,8 @@ a{
 }
 
 .user-chats-realtime-ul{
-    display: flex;
-    flex-direction: column-reverse;
+    display: flex !important;
+    flex-direction: column-reverse !important;
 }
 .user-chats-realtime-ul li {
     margin-top: 10px;
@@ -189,7 +189,8 @@ a{
     /* background-color: red !important; */
     background-color: #FFFFFF !important;
     border-radius: 5px;
-
+    margin-right: auto !important;
+    
 }
 .myme{
     background-color:#D9FDD3 !important;
@@ -199,6 +200,28 @@ a{
     border-radius: 5px;
 
 } 
+
+@media only screen and (max-width: 370px) {
+    .user-chats-realtime-ul{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+    .frnd{
+        /* background-color: red !important; */
+        background-color: #FFFFFF !important;
+        border-radius: 5px;
+        margin-right: auto !important;
+        
+    }
+    .myme{
+        background-color:#D9FDD3 !important;
+        margin-left: auto;
+        /* display: flex; */
+        flex-direction: row-reverse;
+        border-radius: 5px;
+    
+    } 
+  }
 
 
 /* signout  */
@@ -260,6 +283,42 @@ button.btn-close.text-reset {
 }
 .offcanvas-header {
     background-color:#46e97c !important ;
+}
+
+
+.logout_wrapper-res{
+    display: none;;
+}
+.show-res{
+    display: block;
+  
+}
+.logout_wrapper-res.show-res {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.logout_wrapper-res.show-res ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.logout_wrapper-res.show-res ul li {
+    list-style: none;
+    border: 2px solid  #46e97c;
+    border-radius: 5px;
+    background: linear-gradient(90deg,#80FF72,#7EE8FA);
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color:  #667781;
+
+    
 }
 
 

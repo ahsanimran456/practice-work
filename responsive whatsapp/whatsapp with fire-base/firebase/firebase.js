@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
 import { getAuth, signOut ,createUserWithEmailAndPassword,signInWithEmailAndPassword , onAuthStateChanged,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-import { getFirestore,setDoc,doc,getDocs,getDoc,collection ,query,onSnapshot,addDoc,orderBy,where,  updateDoc,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { getFirestore,setDoc,doc,getDocs,getDoc,collection ,query,onSnapshot,addDoc,orderBy,where,  updateDoc,deleteField} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 import {getStorage,ref,uploadBytesResumable,getDownloadURL,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-storage.js";  
 const firebaseConfig = {
     apiKey: "AIzaSyDWOci-uhl9sNnqe68S-jx0uvH0qtqehwI",
@@ -24,7 +24,7 @@ const db = getFirestore(app);
 export{app,auth,getAuth,signOut,orderBy ,createUserWithEmailAndPassword,signInWithEmailAndPassword, onAuthStateChanged,where,query}
 // firestore 
 
-export{db,setDoc,doc,getDocs,getDoc,collection,onSnapshot,addDoc,  updateDoc,}
+export{db,setDoc,doc,getDocs,getDoc,collection,onSnapshot,addDoc,  updateDoc, deleteField}
 // storage 
 
 export {getStorage,ref,uploadBytesResumable,getDownloadURL,} 
