@@ -1,0 +1,540 @@
+* {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    box-sizing: border-box !important;
+    /* overflow-x: hidden; */
+
+}
+
+a {
+    color: black !important;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    /* display: none; */
+}
+
+.loader img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    /* display: none; */
+}
+
+.loaderRes img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+/* responsive menu frnd  */
+@media only screen and (max-width: 769px) {
+    .menu-responsive {
+        display: block !important;
+        background-color: #46e97c;
+
+    }
+
+    .list-hide-sm {
+        display: none;
+    }
+    .loader img{
+        display: none;
+    }
+    
+}
+
+.menu-responsive {
+    display: none;
+}
+
+.hide-menu {
+    background-color: green;
+    border: 1px solid #46e97c;
+}
+
+.hide-menu:hover {
+    background-color: green;
+
+    border: 1px solid #46e97c;
+}
+
+
+/* profile list  */
+.header {
+    padding: 7px 7px !important;
+}
+
+.header-res {
+    padding: 5px 10px;
+}
+
+/* friends lis css  */
+
+/* .each-friend{
+
+} */
+.myFriends {
+    width: 100%;
+    height: 88vh;
+    /* change karni hy  */
+    padding: 10px 10px !important;
+    overflow-y: scroll;
+    background-color: #F0F2F5;
+}
+
+.myFriends a {
+    text-decoration: none;
+    color: black !important;
+    font-size: 17px;
+
+}
+
+.each-friend {
+    margin: 5px 0;
+    cursor: pointer;
+
+}
+
+.eachFriends-res a {
+    color: black;
+}
+
+.hr-sec {
+    width: 100%;
+    opacity: 0.1;
+}
+
+
+/* chat portion css  */
+
+/* chat header  */
+.chat-header {
+    padding: 7px 7px;
+}
+
+/* chat messages portion  */
+
+.chatShow-portion {
+    background-image: url(../images/chatback.png);
+    width: 100%;
+    background-size: cover;
+    height: 88vh;
+    position: relative;
+}
+
+/* message portion  */
+
+/* message portion initial  */
+
+.chat-initial-inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 120px 5px;
+}
+
+.mobileRespon {
+    display: none;
+}
+
+@media only screen and (max-width: 769px) {
+    .chat-initial {
+        width: 100%;
+    }
+
+    .chat-initial-inner {
+        display: none;
+    }
+
+    .mobileRespon {
+        display: block;
+        width: 100% !important;
+    }
+
+    body {
+        background-color: #111111;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .svgicon {
+        width: 100%;
+    }
+}
+
+/* .svgicon{
+    width: 100%;
+ } */
+.res-mob {
+    width: 100%;
+}
+
+.chat-initial-inner h3 {
+    font-weight: 300;
+    color: #667781;
+}
+
+.chat-initial-inner p {
+    font-size: 13px;
+    color: #667781;
+}
+
+.chat-initial {
+    display: block;
+}
+
+.chat-click {
+    display: none;
+}
+
+.message-portion {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+.message-col {
+    width: 95%;
+    /* height: 50px; */
+}
+
+.message-col input {
+    width: inherit;
+}
+
+#send {
+    border: none;
+    background-color: #FFFFFF;
+}
+
+/* msg realtime  */
+
+.usersChats-Realtime {
+    width: 100%;
+    height: inherit;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    overflow: scroll;
+
+}
+
+.user-chats-realtime-ul {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    margin-bottom: 60px !important;
+}
+
+.user-chats-realtime-ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    width: fit-content;
+    padding: 10px 10px;
+    font-size: 14px;
+    list-style: none;
+}
+
+.frnd {
+    /* background-color: red !important; */
+    background-color: #FFFFFF !important;
+    border-radius: 5px;
+    margin-right: auto !important;
+
+}
+
+.myme {
+    background-color: #D9FDD3 !important;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+
+}
+
+
+
+
+/* signout  */
+
+.logout_wrapper {
+    display: none;
+    ;
+}
+
+.show {
+    display: block;
+
+}
+
+.logout_wrapper.show {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.logout_wrapper.show ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout_wrapper.show ul li {
+    list-style: none;
+    border: 2px solid #46e97c;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #80FF72, #7EE8FA);
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #667781;
+
+
+}
+
+
+/* responsive portion  */
+
+.header-res {
+    background-color: #F0F2F5;
+}
+
+/* friends list  */
+.myFriends-res {
+    margin-top: 10px;
+}
+
+.each-friend-res {
+    cursor: pointer;
+}
+
+button.btn-close.text-reset {
+    margin-right: 10px;
+    font-size: 21px;
+
+}
+
+.offcanvas-header {
+    background-color: #46e97c !important;
+}
+
+
+.logout_wrapper-res {
+    display: none;
+    ;
+}
+
+.show-res {
+    display: block;
+
+}
+
+.logout_wrapper-res.show-res {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.logout_wrapper-res.show-res ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout_wrapper-res.show-res ul li {
+    list-style: none;
+    border: 2px solid #46e97c;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #80FF72, #7EE8FA);
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #667781;
+
+
+}
+
+
+@media screen and (max-width:600px) {
+    .chat-header {
+        position: fixed;
+        top: 5%;
+        width: 100%;
+        z-index: 99;
+        background: #fff;
+    }
+
+    .message-portion {
+        position: static;
+        bottom: 0;
+        padding: 6px 10px;
+        width: 100%;
+        background-color: #FFFFFF;
+        display: flex !important;
+        justify-content: space-around !important;
+    }
+
+    .chat-initial-inner {
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .menu-responsive {
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .message-portion {
+        position: fixed;
+        bottom: 12px;
+    }
+}
+
+
+
+/* responsive  */
+.res-heading h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #667781;
+    margin: 0 !important;
+}
+
+
+.res-header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background-color: #3A3B3C !important;
+    border: none;
+}
+
+.whatsappicon {
+    display: flex;
+    padding: 5px 10px !important;
+}
+
+.whatsappicon i {
+    color: #667781 !important;
+
+
+}
+
+.whatsappicon div {
+    margin: 0 5px !important;
+}
+
+.res-fixed-header-div {
+    width: 100%;
+    padding: 10px 5px !important;
+    display: flex;
+    align-items: center;
+    background-color: #3A3B3C;
+    border: none;
+}
+
+.camera_icon {
+    width: 10%;
+    text-align: center;
+}
+
+.camera_icon i {
+    color: #667781 !important;
+}
+
+.res-chats {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.res-chats h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    letter-spacing: -1px;
+    margin: 0 !important;
+    color: #2e8b57;
+    filter: brightness(1.75);
+
+    /* font-size: 10px !important; */
+
+}
+
+
+/* user show  */
+.list {
+    margin-top: 100px;
+    /* position: absolute; */
+    width: 100% !important;
+}
+
+.res-user-show {
+    padding: 10px 10px;
+}
+.list-of-friends{
+    width: 100%;
+}
+
+.res-each-friend {
+    margin: 10px 0;
+    display: flex;
+}
+.res-each-friend:hover{
+    cursor: pointer;
+}
+
+.profiles{
+    width: 20%;
+}
+.names{
+    width: 80%;
+    padding: 10px 5px;
+}
+.names span{
+    color: #fff;
+    font-weight: 500;
+}
+ 
+
+.mob-res-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}

@@ -1,0 +1,232 @@
+
+.main{
+    background-image: url(./images/background.png ) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+
+}
+   .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 370px;
+    padding: 25px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  @media only screen and (max-width: 370px) {
+    .login-box{
+      width: 350px;
+    }
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .text-success {
+    color: #29cd4b!important;
+}
+  .login-box .user-box {
+    position: relative;
+  }
+  form{
+    position: relative;
+  }
+  .spinner-border {
+    display: none;
+    position: absolute;
+    top: 75%;
+    right: 17%
+}
+.spinner-grow{
+    display: none;
+    position: absolute;
+    top: 65%;
+    right: 17%
+}
+  a#signupbtn {
+    position: relative;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+/* .loader img{
+  width: 100%;
+  height: 100%;
+} */
+
+
+
+
+
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #46e97c;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #46e97c;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 7px;
+    letter-spacing: 4px
+  }
+  
+  .login-box .submithover:hover {
+    background: #46e97c;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #46e97c,
+                0 0 25px #46e97c,
+                0 0 50px #46e97c,
+                0 0 100px #46e97c;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, gray);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, gray);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #46e97c);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #46e97c);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+
+
+.hidden{
+  display: none;
+}
+
+input::file-selector-button{
+    font-weight: bold;
+    color: #29cd4b;
+    padding: 0.5em;
+    border: thin solid #28cd4b ;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* extra styeling   */
+ /* error button st  */
+ button.swal2-confirm.swal2-styled.swal2-default-outline {
+    width: 100px;
+}
+
+.swal2-popup.swal2-modal.animate__animated.animate__fadeInDown{
+    background: rgb(54 54 54 / 54%) !important;
+}
